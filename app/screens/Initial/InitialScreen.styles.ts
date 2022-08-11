@@ -9,7 +9,7 @@ interface IInitialScreenStyles {
 export const styles = StyleSheet.create<IInitialScreenStyles>({
   root: {
     flex: 1,
-    backgroundColor: COLORS.WHITE,
+    backgroundColor: COLORS.TREE,
     alignItems: 'center',
     justifyContent: 'center',
   },

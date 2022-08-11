@@ -9,23 +9,16 @@ const BASE: TextStyle = {
 
 interface IExtendedTextStyles {
   default: TextStyle;
-  title: TextStyle;
-  secondary: TextStyle;
+  initialTitle: TextStyle;
 }
 
 export type ExtendedTextPresets = keyof IExtendedTextStyles;
 
 export default StyleSheet.create<IExtendedTextStyles>({
   default: BASE,
-
-  title: {
-    ...BASE,
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
-
-  secondary: {
-    ...BASE,
-    fontSize: 11,
+  initialTitle: {
+    fontSize: 34,
+    fontWeight: '700',
+    color: COLORS.FOG,
   },
 });

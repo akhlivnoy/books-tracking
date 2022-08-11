@@ -15,7 +15,7 @@ export const InitialScreen: React.FC<IInitialScreenProps> = ({
 
   return (
     <SafeAreaView style={styles.root}>
-      <ExtendedText preset="title">Loading simulation...</ExtendedText>
+      <ExtendedText preset="initialTitle">Books Tracking</ExtendedText>
     </SafeAreaView>
   );
 };

@@ -2,8 +2,11 @@
 // https://chir.ag/projects/name-that-color/
 
 export const COLORS = {
-  PRIMARY: '#004B8F',
-  WHITE: 'white',
-  BLACK: '#333',
-  BORDER: '#e2e2e2',
+  BLACK: '#000000',
+  DARKGREY: '#555F60',
+  FOG: '#C5CED3',
+  FORESTMIST: '#85B2B5',
+  SUNNY: '#E2C290',
+  TREE: '#316163',
+  WHITE: '#FFFFFF',
 };

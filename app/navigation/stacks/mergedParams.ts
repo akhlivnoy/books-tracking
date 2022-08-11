@@ -1,4 +1,4 @@
-import { HomeStackParams } from './homeStackNavigator';
+import { AuthStackParams } from './authStackNavigator';
 import { RootParams } from '../rootNavigator';
 
-export type MergedStackParams = HomeStackParams & RootParams;
+export type MergedStackParams = AuthStackParams & RootParams;

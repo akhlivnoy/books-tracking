@@ -1,1 +1,1 @@
-export * from './homeStackNavigator';
+export * from './authStackNavigator';

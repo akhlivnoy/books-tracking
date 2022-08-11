@@ -9,16 +9,35 @@ const BASE: TextStyle = {
 
 interface IExtendedTextStyles {
   default: TextStyle;
-  initialTitle: TextStyle;
+  medium12: TextStyle;
+  bold12: TextStyle;
+  bold14: TextStyle;
+  bold34: TextStyle;
 }
 
 export type ExtendedTextPresets = keyof IExtendedTextStyles;
 
 export default StyleSheet.create<IExtendedTextStyles>({
   default: BASE,
-  initialTitle: {
+  medium12: {
+    fontSize: 12,
+    fontWeight: '500',
+    lineHeight: 17,
+  },
+  bold12: {
+    fontSize: 12,
+    fontWeight: '700',
+    lineHeight: 17,
+  },
+  bold14: {
+    fontSize: 14,
+    fontWeight: '700',
+    lineHeight: 21,
+  },
+  bold34: {
     fontSize: 34,
     fontWeight: '700',
-    color: COLORS.FOG,
+    // TODO: add to InitialScreen.styles
+    //color: COLORS.FOG,
   },
 });

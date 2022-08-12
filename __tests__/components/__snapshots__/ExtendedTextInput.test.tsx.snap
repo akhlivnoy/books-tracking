@@ -31,6 +31,7 @@ exports[`UI: ExtendedTextInput should match snapshot 1`] = `
           "alignItems": "center",
           "backgroundColor": "#85B2B5",
           "borderRadius": 10,
+          "minHeight": 50,
           "padding": 10,
         },
         Object {
@@ -112,6 +113,7 @@ exports[`UI: ExtendedTextInput should match snapshot 2`] = `
           "alignItems": "center",
           "backgroundColor": "#85B2B5",
           "borderRadius": 10,
+          "minHeight": 50,
           "padding": 10,
         },
         Object {

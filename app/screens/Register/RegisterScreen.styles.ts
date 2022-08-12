@@ -11,6 +11,7 @@ interface IHomeScreenStyles {
   title: TextStyle;
   darkgreyColor: TextStyle;
   input: ViewStyle;
+  errorColor: ViewStyle;
   bottomContainer: ViewStyle;
   agreement: ViewStyle;
   forestmistColor: TextStyle;
@@ -67,6 +68,11 @@ export const styles = StyleSheet.create<IHomeScreenStyles>({
   },
   input: {
     marginBottom: 15,
+  },
+  errorColor: {
+    marginTop: -5,
+    marginBottom: 15,
+    color: COLORS.RED,
   },
   bottomContainer: {
     flexDirection: 'row',

@@ -6,7 +6,7 @@ exports[`UI: ExtendedTextInput should match snapshot 1`] = `
     style={
       Array [
         Object {
-          "color": "#333",
+          "color": "#000000",
           "fontSize": 15,
         },
         Array [
@@ -21,25 +21,50 @@ exports[`UI: ExtendedTextInput should match snapshot 1`] = `
   >
     test input
   </Text>
-  <TextInput
-    onChangeText={[Function]}
+  <View
     style={
       Array [
         Object {
-          "borderBottomWidth": 1,
+          "flexDirection": "row",
+        },
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#85B2B5",
+          "borderRadius": 10,
+          "minHeight": 50,
+          "padding": 10,
         },
         Object {
           "backgroundColor": "yellow",
         },
       ]
     }
-    value="test input"
-  />
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../app/assets/images/user.png",
+        }
+      }
+    />
+    <TextInput
+      onChangeText={[Function]}
+      style={
+        Object {
+          "color": "#555F60",
+          "flex": 1,
+          "fontWeight": "500",
+          "marginLeft": 10,
+        }
+      }
+      value="test input"
+    />
+  </View>
   <Text
     style={
       Array [
         Object {
-          "color": "#333",
+          "color": "#000000",
           "fontSize": 15,
         },
         Array [
@@ -63,7 +88,7 @@ exports[`UI: ExtendedTextInput should match snapshot 2`] = `
     style={
       Array [
         Object {
-          "color": "#333",
+          "color": "#000000",
           "fontSize": 15,
         },
         Array [
@@ -80,67 +105,92 @@ exports[`UI: ExtendedTextInput should match snapshot 2`] = `
   </Text>
   <View
     style={
-      Object {
-        "borderBottomWidth": 1,
-        "flexDirection": "row",
-      }
+      Array [
+        Object {
+          "flexDirection": "row",
+        },
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#85B2B5",
+          "borderRadius": 10,
+          "minHeight": 50,
+          "padding": 10,
+        },
+        Object {
+          "backgroundColor": "yellow",
+        },
+      ]
     }
   >
-    <TextInput
-      onChangeText={[Function]}
-      secureTextEntry={true}
-      style={
-        Array [
-          Array [
-            Object {
-              "borderBottomWidth": 1,
-            },
-            Object {
-              "backgroundColor": "yellow",
-            },
-          ],
-          Object {
-            "borderBottomWidth": 0,
-            "flex": 1,
-          },
-        ]
+    <Image
+      source={
+        Object {
+          "testUri": "../../../app/assets/images/lock.png",
+        }
       }
-      value="test input"
     />
     <View
-      accessible={true}
-      collapsable={false}
-      focusable={true}
-      nativeID="animatedComponent"
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "opacity": 1,
+          "borderBottomWidth": 1,
+          "flexDirection": "row",
         }
       }
     >
+      <TextInput
+        onChangeText={[Function]}
+        secureTextEntry={true}
+        style={
+          Array [
+            Object {
+              "color": "#555F60",
+              "flex": 1,
+              "fontWeight": "500",
+              "marginLeft": 10,
+            },
+            Object {
+              "borderBottomWidth": 0,
+              "flex": 1,
+            },
+          ]
+        }
+        value="test input"
+      />
       <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        nativeID="animatedComponent"
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "backgroundColor": "red",
-            "height": 15,
-            "width": 15,
+            "opacity": 1,
           }
         }
-      />
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "red",
+              "height": 15,
+              "width": 15,
+            }
+          }
+        />
+      </View>
     </View>
   </View>
   <Text
     style={
       Array [
         Object {
-          "color": "#333",
+          "color": "#000000",
           "fontSize": 15,
         },
         Array [

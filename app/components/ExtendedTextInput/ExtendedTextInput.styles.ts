@@ -18,6 +18,7 @@ export const styles = StyleSheet.create<IExtendedTextInputStyles>({
     color: COLORS.DARKGREY,
   },
   inputContainer: {
+    minHeight: 50,
     padding: 10,
     alignItems: 'center',
     backgroundColor: COLORS.FORESTMIST,

@@ -12,15 +12,9 @@ import { ILoginScreenProps } from './LoginScreen.props';
 import { styles } from './LoginScreen.styles';
 
 export const LoginScreen: React.FC<ILoginScreenProps> = ({ navigation }) => {
-  const goToSignUp = useCallback(
-    () => {
-      //TODO: uncomment when adding RegisterScreen
-      //navigation.navigate('Register');
-    },
-    [
-      //navigation
-    ],
-  );
+  const goToSignUp = useCallback(() => {
+    navigation.navigate('Register');
+  }, [navigation]);
   return (
     <SafeAreaView style={styles.main}>
       <View style={styles.background} />
@@ -55,6 +49,7 @@ export const LoginScreen: React.FC<ILoginScreenProps> = ({ navigation }) => {
             <ExtendedText preset="medium12">
               Don't have an account?
             </ExtendedText>
+
             <TouchableOpacity onPress={goToSignUp}>
               <ExtendedText preset="bold12" style={styles.forestmistColor}>
                 Sign Up

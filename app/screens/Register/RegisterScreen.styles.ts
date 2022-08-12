@@ -6,19 +6,22 @@ interface IHomeScreenStyles {
   main: ViewStyle;
   background: ViewStyle;
   contentContainer: ViewStyle;
+  roundBtn: ViewStyle;
   titleContainer: ViewStyle;
   title: TextStyle;
   darkgreyColor: TextStyle;
   input: ViewStyle;
   bottomContainer: ViewStyle;
+  agreement: ViewStyle;
   forestmistColor: TextStyle;
 }
 
 export const styles = StyleSheet.create<IHomeScreenStyles>({
   main: {
     flex: 1,
+    justifyContent: 'center',
     paddingHorizontal: 25,
-    paddingVertical: 100,
+    paddingVertical: 10,
     backgroundColor: COLORS.TREE,
   },
   background: {
@@ -33,17 +36,27 @@ export const styles = StyleSheet.create<IHomeScreenStyles>({
     borderTopRightRadius: 30,
   },
   contentContainer: {
-    flex: 1,
     zIndex: 2,
-    justifyContent: 'space-evenly',
     paddingHorizontal: 20,
     paddingVertical: 50,
     backgroundColor: COLORS.WHITE,
     borderRadius: 20,
   },
+  roundBtn: {
+    position: 'absolute',
+    top: 20,
+    left: 15,
+    width: 41,
+    height: 41,
+    zIndex: 3,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: COLORS.FOG,
+    borderRadius: 50,
+  },
   titleContainer: {
     alignItems: 'center',
-    marginBottom: 35,
+    marginBottom: 50,
   },
   title: {
     marginBottom: 4,
@@ -59,6 +72,10 @@ export const styles = StyleSheet.create<IHomeScreenStyles>({
     flexDirection: 'row',
     justifyContent: 'space-around',
     marginTop: 15,
+  },
+  agreement: {
+    marginVertical: 25,
+    textAlign: 'center',
   },
   forestmistColor: {
     color: COLORS.FORESTMIST,

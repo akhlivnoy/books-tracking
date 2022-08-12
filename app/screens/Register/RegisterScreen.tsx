@@ -1,8 +1,8 @@
 import React, { useCallback } from 'react';
 import { Image, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { IMAGES } from '../../assets';
 
+import { IMAGES } from '../../assets';
 import {
   ExtendedButton,
   ExtendedText,
@@ -24,14 +24,18 @@ export const RegisterScreen: React.FC<IRegisterScreenProps> = ({
       <View style={styles.background} />
 
       <View style={styles.contentContainer}>
-        <TouchableOpacity onPress={navigation.goBack}>
+        <TouchableOpacity onPress={navigation.goBack} style={styles.roundBtn}>
           <Image source={IMAGES.ARROW_LEFT} />
         </TouchableOpacity>
 
         <View style={styles.titleContainer}>
-          <ExtendedText>Register</ExtendedText>
+          <ExtendedText preset="regular50" style={styles.title}>
+            Register
+          </ExtendedText>
 
-          <ExtendedText>Create your new account</ExtendedText>
+          <ExtendedText preset="medium20" style={styles.darkgreyColor}>
+            Create your new account
+          </ExtendedText>
         </View>
 
         <View>
@@ -61,18 +65,21 @@ export const RegisterScreen: React.FC<IRegisterScreenProps> = ({
         </View>
 
         <View>
-          <ExtendedText>
+          <ExtendedText preset="medium12" style={styles.agreement}>
             By signing you agree to our term of use and privacy notice
           </ExtendedText>
 
-          <ExtendedButton title="Sign up" />
+          <ExtendedButton onPress={goToLogin} preset="tree" title="Sign up" />
 
           <View style={styles.bottomContainer}>
             <ExtendedText preset="medium12">
               Already have an account?
             </ExtendedText>
+
             <TouchableOpacity onPress={goToLogin}>
-              <ExtendedText>Sign Up</ExtendedText>
+              <ExtendedText preset="bold12" style={styles.forestmistColor}>
+                Login
+              </ExtendedText>
             </TouchableOpacity>
           </View>
         </View>

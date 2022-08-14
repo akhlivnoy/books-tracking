@@ -15,6 +15,11 @@ export const LoginScreen: React.FC<ILoginScreenProps> = ({ navigation }) => {
   const goToSignUp = useCallback(() => {
     navigation.navigate('Register');
   }, [navigation]);
+
+  const goToHome = useCallback(() => {
+    navigation.replace('MainTabNavigator');
+  }, [navigation]);
+
   return (
     <SafeAreaView style={styles.main}>
       <View style={styles.background} />
@@ -44,7 +49,7 @@ export const LoginScreen: React.FC<ILoginScreenProps> = ({ navigation }) => {
           />
         </View>
         <View>
-          <ExtendedButton title="Login" preset="tree" />
+          <ExtendedButton onPress={goToHome} title="Login" preset="tree" />
           <View style={styles.bottomContainer}>
             <ExtendedText preset="medium12">
               Don't have an account?

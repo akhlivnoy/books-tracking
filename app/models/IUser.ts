@@ -1,3 +1,5 @@
+import { ImageSourcePropType } from 'react-native';
+
 export interface IApiUser {
   token: string;
   id: string;
@@ -9,4 +11,10 @@ export interface IApiUser {
   email_verified_at: string;
   create_at: string;
   updated_at: string;
+}
+
+export interface IUser {
+  name: string;
+  surname: string;
+  image: ImageSourcePropType;
 }

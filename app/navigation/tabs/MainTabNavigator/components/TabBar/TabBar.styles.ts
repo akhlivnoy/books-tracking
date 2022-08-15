@@ -9,10 +9,10 @@ interface ITabBarStyles {
 
 export const styles = StyleSheet.create<ITabBarStyles>({
   container: {
-    paddingVertical: 16,
+    //paddingVertical: 16,
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
-    backgroundColor: COLORS.WHITE,
+    //backgroundColor: COLORS.WHITE,
   },
   pb10: {
     paddingBottom: 10,

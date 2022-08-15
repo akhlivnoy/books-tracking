@@ -4,7 +4,7 @@ import { Text, View } from 'react-native';
 import { IMAGES } from '../../../assets';
 import { generalStyles } from '../../../utils/styles';
 import { TabNavigatorOptions } from '../../../utils/types';
-import { TabBarIcon, TabBarUserPhoto } from './components';
+import { TabBarIcon } from './components';
 import { styles } from './MainTabNavigator.options.styles';
 
 export const ScreenStub: React.FC = () => (

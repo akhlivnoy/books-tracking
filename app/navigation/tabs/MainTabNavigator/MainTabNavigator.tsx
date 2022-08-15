@@ -24,7 +24,6 @@ export const MainTabNavigator = () => (
   <Tab.Navigator
     screenOptions={DISABLED_SWIPE_GESTURES_OPTIONS}
     tabBar={(props: ITabBarProps) => <TabBar {...props} />}
-    lazy={false}
     tabBarOptions={mainTabBarOptions}>
     <Tab.Screen
       name="HomeScreen"

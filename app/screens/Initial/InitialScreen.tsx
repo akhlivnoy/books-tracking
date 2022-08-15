@@ -9,13 +9,14 @@ export const InitialScreen: React.FC<IInitialScreenProps> = ({
   navigation,
 }) => {
   useEffect(() => {
-    // TODO: Timeout for loading simulation. Replace it with data fetching
-    setTimeout(() => navigation.replace('AuthStack'), 500);
+    setTimeout(() => navigation.replace('HomeStack'), 500);
   }, [navigation]);
 
   return (
     <SafeAreaView style={styles.root}>
-      <ExtendedText preset="initialTitle">Books Tracking</ExtendedText>
+      <ExtendedText preset="bold34" style={styles.fogColor}>
+        Books Tracking
+      </ExtendedText>
     </SafeAreaView>
   );
 };

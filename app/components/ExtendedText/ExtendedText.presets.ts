@@ -9,16 +9,15 @@ const BASE: TextStyle = {
 
 interface IExtendedTextStyles {
   default: TextStyle;
-  initialTitle: TextStyle;
+  bold34: TextStyle;
 }
 
 export type ExtendedTextPresets = keyof IExtendedTextStyles;
 
 export default StyleSheet.create<IExtendedTextStyles>({
   default: BASE,
-  initialTitle: {
+  bold34: {
     fontSize: 34,
     fontWeight: '700',
-    color: COLORS.FOG,
   },
 });

@@ -6,7 +6,7 @@ exports[`UI: ExtendedTextInput should match snapshot 1`] = `
     style={
       Array [
         Object {
-          "color": "#333",
+          "color": "#000000",
           "fontSize": 15,
         },
         Array [
@@ -39,7 +39,7 @@ exports[`UI: ExtendedTextInput should match snapshot 1`] = `
     style={
       Array [
         Object {
-          "color": "#333",
+          "color": "#000000",
           "fontSize": 15,
         },
         Array [
@@ -63,7 +63,7 @@ exports[`UI: ExtendedTextInput should match snapshot 2`] = `
     style={
       Array [
         Object {
-          "color": "#333",
+          "color": "#000000",
           "fontSize": 15,
         },
         Array [
@@ -140,7 +140,7 @@ exports[`UI: ExtendedTextInput should match snapshot 2`] = `
     style={
       Array [
         Object {
-          "color": "#333",
+          "color": "#000000",
           "fontSize": 15,
         },
         Array [

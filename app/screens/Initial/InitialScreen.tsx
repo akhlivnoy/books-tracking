@@ -9,7 +9,7 @@ export const InitialScreen: React.FC<IInitialScreenProps> = ({
   navigation,
 }) => {
   useEffect(() => {
-    setTimeout(() => navigation.replace('HomeStack'), 500);
+    setTimeout(() => navigation.replace('AuthStack'), 500);
   }, [navigation]);
 
   return (

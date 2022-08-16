@@ -1,5 +1,5 @@
-import React, { useMemo } from 'react';
-import { TextInput, TextInputProps, View } from 'react-native';
+import React, { useCallback, useMemo } from 'react';
+import { Image, TextInput, TextInputProps, View } from 'react-native';
 
 import { ExtendedText } from '../ExtendedText';
 import {
@@ -9,6 +9,8 @@ import {
 import { IExtendedTextInputProps } from './ExtendedTextInput.props';
 import { TextInputPasswordToggle } from './inputs';
 import { styles } from './ExtendedTextInput.styles';
+import { IMAGES } from '../../assets';
+import { generalStyles } from '../../utils/styles';
 
 export const ExtendedTextInput: React.FC<IExtendedTextInputProps> = ({
   label,
@@ -36,16 +38,27 @@ export const ExtendedTextInput: React.FC<IExtendedTextInputProps> = ({
     }
   }, [type]);
 
+  const getIconSource = useCallback(() => {
+    switch (type) {
+      case ExtendedTextInputType.Email:
+        return IMAGES.EMAIL;
+      case ExtendedTextInputType.Password:
+      case ExtendedTextInputType.PasswordToggle:
+        return IMAGES.LOCK;
+      default:
+        return IMAGES.USER;
+    }
+  }, [type]);
+
   return (
     <View>
       {label && (
         <ExtendedText style={[styles.label, labelStyle]}>{label}</ExtendedText>
       )}
-      <InputComponent
-        {...initialInputProps}
-        {...rest}
-        style={[styles.input, style]}
-      />
+      <View style={[generalStyles.row, styles.inputContainer, style]}>
+        <Image source={getIconSource()} />
+        <InputComponent {...initialInputProps} {...rest} style={styles.input} />
+      </View>
       {error && (
         <ExtendedText style={[styles.error, errorStyle]}>{error}</ExtendedText>
       )}

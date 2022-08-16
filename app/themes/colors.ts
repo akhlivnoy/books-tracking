@@ -7,6 +7,7 @@ export const COLORS = {
   FOG: '#C5CED3',
   FORESTMIST: '#85B2B5',
   SUNNY: '#E2C290',
+  TITAN_WHITE: '#FCFCFF',
   TREE: '#316163',
   WHITE: '#FFFFFF',
 };

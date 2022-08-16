@@ -11,7 +11,7 @@ interface IHomeScreenStyles {
   title: TextStyle;
   darkgreyColor: TextStyle;
   input: ViewStyle;
-  errorColor: ViewStyle;
+  errorColor: TextStyle;
   bottomContainer: ViewStyle;
   agreement: ViewStyle;
   forestmistColor: TextStyle;
@@ -67,11 +67,9 @@ export const styles = StyleSheet.create<IHomeScreenStyles>({
     color: COLORS.DARKGREY,
   },
   input: {
-    marginBottom: 15,
+    marginBottom: 35,
   },
   errorColor: {
-    marginTop: -5,
-    marginBottom: 15,
     color: COLORS.RED,
   },
   bottomContainer: {
@@ -80,7 +78,7 @@ export const styles = StyleSheet.create<IHomeScreenStyles>({
     marginTop: 15,
   },
   agreement: {
-    marginVertical: 25,
+    marginVertical: 15,
     textAlign: 'center',
   },
   forestmistColor: {

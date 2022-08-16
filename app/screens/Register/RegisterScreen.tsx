@@ -3,6 +3,7 @@ import { Image, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Formik } from 'formik';
 import * as yup from 'yup';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 import { IMAGES } from '../../assets';
 import {
@@ -84,7 +85,7 @@ export const RegisterScreen: React.FC<IRegisterScreenProps> = ({
             isValid,
             handleSubmit,
           }) => (
-            <>
+            <KeyboardAwareScrollView>
               <ExtendedTextInput
                 value={values.fullName}
                 onChangeText={handleChange('fullName')}
@@ -92,12 +93,9 @@ export const RegisterScreen: React.FC<IRegisterScreenProps> = ({
                 type={ExtendedTextInputType.Default}
                 placeholder="Full Name"
                 style={styles.input}
+                error={(touched.fullName && errors.fullName) || undefined}
+                errorStyle={styles.errorColor}
               />
-              {touched.fullName && errors.fullName && (
-                <ExtendedText preset="bold12" style={styles.errorColor}>
-                  {errors.fullName}
-                </ExtendedText>
-              )}
 
               <ExtendedTextInput
                 value={values.email}
@@ -106,12 +104,9 @@ export const RegisterScreen: React.FC<IRegisterScreenProps> = ({
                 type={ExtendedTextInputType.Email}
                 placeholder="Email"
                 style={styles.input}
+                error={(touched.email && errors.email) || undefined}
+                errorStyle={styles.errorColor}
               />
-              {touched.email && errors.email && (
-                <ExtendedText preset="bold12" style={styles.errorColor}>
-                  {errors.email}
-                </ExtendedText>
-              )}
 
               <ExtendedTextInput
                 value={values.password}
@@ -120,12 +115,9 @@ export const RegisterScreen: React.FC<IRegisterScreenProps> = ({
                 type={ExtendedTextInputType.Password}
                 placeholder="Password"
                 style={styles.input}
+                error={(touched.password && errors.password) || undefined}
+                errorStyle={styles.errorColor}
               />
-              {touched.password && errors.password && (
-                <ExtendedText preset="bold12" style={styles.errorColor}>
-                  {errors.password}
-                </ExtendedText>
-              )}
 
               <ExtendedTextInput
                 value={values.confirmPassword}
@@ -134,12 +126,12 @@ export const RegisterScreen: React.FC<IRegisterScreenProps> = ({
                 type={ExtendedTextInputType.Password}
                 placeholder="Confirm Password"
                 style={styles.input}
+                error={
+                  (touched.confirmPassword && errors.confirmPassword) ||
+                  undefined
+                }
+                errorStyle={styles.errorColor}
               />
-              {touched.confirmPassword && errors.confirmPassword && (
-                <ExtendedText preset="bold12" style={styles.errorColor}>
-                  {errors.confirmPassword}
-                </ExtendedText>
-              )}
 
               <ExtendedText preset="medium12" style={styles.agreement}>
                 By signing you agree to our term of use and privacy notice
@@ -151,7 +143,7 @@ export const RegisterScreen: React.FC<IRegisterScreenProps> = ({
                 preset="tree"
                 title="Sign up"
               />
-            </>
+            </KeyboardAwareScrollView>
           )}
         </Formik>
 

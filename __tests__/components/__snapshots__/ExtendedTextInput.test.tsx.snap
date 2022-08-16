@@ -64,11 +64,16 @@ exports[`UI: ExtendedTextInput should match snapshot 1`] = `
     style={
       Array [
         Object {
-          "color": "#000000",
-          "fontSize": 15,
+          "fontSize": 12,
+          "fontWeight": "700",
+          "lineHeight": 17,
         },
         Array [
-          Object {},
+          Object {
+            "bottom": 10,
+            "left": 10,
+            "position": "absolute",
+          },
           Object {
             "color": "red",
             "marginTop": 10,
@@ -190,11 +195,16 @@ exports[`UI: ExtendedTextInput should match snapshot 2`] = `
     style={
       Array [
         Object {
-          "color": "#000000",
-          "fontSize": 15,
+          "fontSize": 12,
+          "fontWeight": "700",
+          "lineHeight": 17,
         },
         Array [
-          Object {},
+          Object {
+            "bottom": 10,
+            "left": 10,
+            "position": "absolute",
+          },
           Object {
             "color": "red",
             "marginTop": 10,

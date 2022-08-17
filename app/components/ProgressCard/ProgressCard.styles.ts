@@ -1,4 +1,5 @@
 import { ImageStyle, StyleSheet, TextStyle, ViewStyle } from 'react-native';
+
 import { COLORS } from '../../themes/colors';
 
 interface IProgressCardStyles {
@@ -15,7 +16,6 @@ interface IProgressCardStyles {
 export const styles = StyleSheet.create<IProgressCardStyles>({
   container: {
     padding: 15,
-    zIndex: 10,
     borderRadius: 10,
     backgroundColor: COLORS.TITAN_WHITE,
   },

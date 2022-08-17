@@ -1,4 +1,4 @@
-import { StyleSheet, ViewStyle, Dimensions } from 'react-native';
+import { StyleSheet, ViewStyle, Dimensions, TextStyle } from 'react-native';
 
 import { COLORS } from '../../themes/colors';
 
@@ -6,6 +6,9 @@ interface IHomeScreenStyles {
   main: ViewStyle;
   background: ViewStyle;
   progressCard: ViewStyle;
+  mt18: TextStyle;
+  darkGreyColor: TextStyle;
+  mt16: ViewStyle;
 }
 
 export const styles = StyleSheet.create<IHomeScreenStyles>({
@@ -13,11 +16,12 @@ export const styles = StyleSheet.create<IHomeScreenStyles>({
     flex: 1,
     paddingHorizontal: 25,
     paddingVertical: 100,
+    paddingTop: 75,
     backgroundColor: COLORS.TREE,
   },
   background: {
     position: 'absolute',
-    zIndex: 1,
+    zIndex: -1,
     bottom: 0,
     left: 0,
     width: Dimensions.get('screen').width,
@@ -28,5 +32,14 @@ export const styles = StyleSheet.create<IHomeScreenStyles>({
   },
   progressCard: {
     marginTop: 30,
+  },
+  mt18: {
+    marginTop: 18,
+  },
+  darkGreyColor: {
+    color: COLORS.DARKGREY,
+  },
+  mt16: {
+    marginTop: 16,
   },
 });

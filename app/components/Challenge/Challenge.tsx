@@ -6,29 +6,22 @@ import { IMAGES } from '../../assets';
 import { IChallengeProps } from './Challenge.props';
 import { styles } from './Challenge.styles';
 
-export const Challenge: React.FC<IChallengeProps> = ({
-  title,
-  points,
-  dateFrom,
-  dateTo,
-  label,
-  style,
-}) => {
+export const Challenge: React.FC<IChallengeProps> = ({ challenge, style }) => {
   return (
     <View style={[styles.container, style]}>
       <View style={styles.mw200}>
         <ExtendedText preset="medium14" style={styles.darkGreyColor}>
-          {title}
+          {challenge.title}
         </ExtendedText>
 
         <ExtendedText
           preset="bold14"
           style={[styles.darkGreyColor, styles.mv6]}>
-          {points} Punkte
+          {challenge.points} Punkte
         </ExtendedText>
 
         <ExtendedText preset="medium12" style={styles.darkGreyColor}>
-          {dateFrom}—{dateTo} • {label}
+          {challenge.dateFrom}—{challenge.dateTo} • {challenge.label}
         </ExtendedText>
       </View>
 

@@ -14,7 +14,6 @@ export const styles = StyleSheet.create<IChallengeStyles>({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    zIndex: 100,
     padding: 15,
     borderRadius: 10,
     backgroundColor: COLORS.TITAN_WHITE,

@@ -1,19 +1,19 @@
 import React from 'react';
 import { View } from 'react-native';
+import _ from 'lodash';
 
 import { IMAGES } from '../../assets';
-import { Challenge, MainHeader, ProgressCard } from '../../components';
-import { IUser } from '../../models/IUser';
+import {
+  Challenge,
+  ExtendedText,
+  MainHeader,
+  ProgressCard,
+} from '../../components';
+import { CHALLENGE_ITEMS, IChallengeListItem, USER } from './HomeScreen.data';
 import { IHomeScreenProps } from './HomeScreen.props';
 import { styles } from './HomeScreen.styles';
 
 export const HomeScreen: React.FC<IHomeScreenProps> = ({ navigation }) => {
-  const USER: IUser = {
-    name: 'Anna',
-    surname: 'Muster',
-    image: IMAGES.DUMMY_AVATAR,
-  };
-
   return (
     <View style={styles.main}>
       <View style={styles.background} />
@@ -27,13 +27,17 @@ export const HomeScreen: React.FC<IHomeScreenProps> = ({ navigation }) => {
         style={styles.progressCard}
       />
 
-      <Challenge
-        title="Hier steht der CHallenge Titel, max zwei Zeilen"
-        points={120}
-        dateFrom="1.9.21"
-        dateTo="1.10.21"
-        label="Label"
-      />
+      <ExtendedText preset="bold14" style={[styles.mt18, styles.darkGreyColor]}>
+        Alle Challenges
+      </ExtendedText>
+
+      {_.map(CHALLENGE_ITEMS, (challengeItem: IChallengeListItem) => (
+        <Challenge
+          challenge={challengeItem.challenge}
+          key={challengeItem.id}
+          style={styles.mt16}
+        />
+      ))}
     </View>
   );
 };

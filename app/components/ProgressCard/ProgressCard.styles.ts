@@ -1,4 +1,4 @@
-import { ImageStyle, StyleSheet, ViewStyle } from 'react-native';
+import { ImageStyle, StyleSheet, TextStyle, ViewStyle } from 'react-native';
 import { COLORS } from '../../themes/colors';
 
 interface IProgressCardStyles {
@@ -8,8 +8,8 @@ interface IProgressCardStyles {
   mb6: ViewStyle;
   mb4: ViewStyle;
   mr10: ImageStyle;
-  bgGray: ViewStyle;
   progressContainer: ViewStyle;
+  darkGreyColor: TextStyle;
 }
 
 export const styles = StyleSheet.create<IProgressCardStyles>({
@@ -17,7 +17,7 @@ export const styles = StyleSheet.create<IProgressCardStyles>({
     padding: 15,
     zIndex: 10,
     borderRadius: 10,
-    backgroundColor: COLORS.WHITE,
+    backgroundColor: COLORS.TITAN_WHITE,
   },
   titleContainer: {
     flexDirection: 'row',
@@ -37,12 +37,12 @@ export const styles = StyleSheet.create<IProgressCardStyles>({
   mr10: {
     marginRight: 10,
   },
-  bgGray: {
-    backgroundColor: 'rgba(197, 206, 211, 0.25);',
-  },
   progressContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 15,
+  },
+  darkGreyColor: {
+    color: COLORS.DARKGREY,
   },
 });

@@ -19,10 +19,14 @@ export const ProgressCard: React.FC<IProgressCardProps> = ({
     <View style={[styles.container, style]}>
       <View style={styles.titleContainer}>
         <View style={styles.mw200}>
-          <ExtendedText preset="medium14" style={styles.mb6}>
+          <ExtendedText
+            preset="medium14"
+            style={[styles.mb6, styles.darkGreyColor]}>
             {title}
           </ExtendedText>
-          <ExtendedText preset="bold12">{points} Punkte</ExtendedText>
+          <ExtendedText preset="bold12" style={styles.darkGreyColor}>
+            {points} Punkte
+          </ExtendedText>
         </View>
 
         <Image source={IMAGES.DUMMY_CARD_IMAGE} />
@@ -32,10 +36,14 @@ export const ProgressCard: React.FC<IProgressCardProps> = ({
           <Image source={IMAGES.AWARD} style={styles.mr10} />
 
           <View>
-            <ExtendedText preset="medium12" style={styles.mb4}>
+            <ExtendedText
+              preset="medium12"
+              style={[styles.mb4, styles.darkGreyColor]}>
               Your Progress
             </ExtendedText>
-            <ExtendedText preset="bold16">{currentProgress}%</ExtendedText>
+            <ExtendedText preset="bold16" style={styles.darkGreyColor}>
+              {currentProgress}%
+            </ExtendedText>
           </View>
         </View>
 
@@ -43,13 +51,18 @@ export const ProgressCard: React.FC<IProgressCardProps> = ({
           <Image source={IMAGES.AWARD} style={styles.mr10} />
 
           <View>
-            <ExtendedText preset="medium12" style={styles.mb4}>
+            <ExtendedText
+              preset="medium12"
+              style={[styles.mb4, styles.darkGreyColor]}>
               Overall Progress
             </ExtendedText>
-            <ExtendedText preset="bold16">{overallProgress}%</ExtendedText>
+            <ExtendedText preset="bold16" style={styles.darkGreyColor}>
+              {overallProgress}%
+            </ExtendedText>
           </View>
         </View>
       </View>
+
       <ProgressBar
         progress={15}
         length={100}

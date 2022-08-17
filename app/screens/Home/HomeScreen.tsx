@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 
 import { IMAGES } from '../../assets';
-import { MainHeader, ProgressCard } from '../../components';
+import { Challenge, MainHeader, ProgressCard } from '../../components';
 import { IUser } from '../../models/IUser';
 import { IHomeScreenProps } from './HomeScreen.props';
 import { styles } from './HomeScreen.styles';
@@ -25,6 +25,14 @@ export const HomeScreen: React.FC<IHomeScreenProps> = ({ navigation }) => {
         overallProgress={30}
         points={10}
         style={styles.progressCard}
+      />
+
+      <Challenge
+        title="Hier steht der CHallenge Titel, max zwei Zeilen"
+        points={120}
+        dateFrom="1.9.21"
+        dateTo="1.10.21"
+        label="Label"
       />
     </View>
   );

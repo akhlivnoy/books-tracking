@@ -11,6 +11,7 @@ interface IExtendedTextStyles {
   default: TextStyle;
   regular50: TextStyle;
   medium12: TextStyle;
+  medium14: TextStyle;
   medium20: TextStyle;
   bold12: TextStyle;
   bold14: TextStyle;
@@ -29,6 +30,11 @@ export default StyleSheet.create<IExtendedTextStyles>({
   },
   medium12: {
     fontSize: 12,
+    fontWeight: '500',
+    lineHeight: 17,
+  },
+  medium14: {
+    fontSize: 14,
     fontWeight: '500',
     lineHeight: 17,
   },

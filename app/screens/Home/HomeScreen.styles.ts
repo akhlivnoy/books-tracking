@@ -1,17 +1,11 @@
-import { StyleSheet, ViewStyle, TextStyle, Dimensions } from 'react-native';
+import { StyleSheet, ViewStyle, Dimensions } from 'react-native';
 
 import { COLORS } from '../../themes/colors';
 
 interface IHomeScreenStyles {
   main: ViewStyle;
   background: ViewStyle;
-  contentContainer: ViewStyle;
-  titleContainer: ViewStyle;
-  title: TextStyle;
-  darkgreyColor: TextStyle;
-  input: ViewStyle;
-  bottomContainer: ViewStyle;
-  forestmistColor: TextStyle;
+  progressCard: ViewStyle;
 }
 
 export const styles = StyleSheet.create<IHomeScreenStyles>({
@@ -32,36 +26,7 @@ export const styles = StyleSheet.create<IHomeScreenStyles>({
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
   },
-  contentContainer: {
-    flex: 1,
-    zIndex: 2,
-    justifyContent: 'space-evenly',
-    paddingHorizontal: 20,
-    paddingVertical: 50,
-    backgroundColor: COLORS.WHITE,
-    borderRadius: 20,
-  },
-  titleContainer: {
-    alignItems: 'center',
-    marginBottom: 35,
-  },
-  title: {
-    marginBottom: 4,
-    color: COLORS.TREE,
-  },
-  darkgreyColor: {
-    color: COLORS.DARKGREY,
-  },
-  input: {
-    marginBottom: 15,
-  },
-  bottomContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginTop: 15,
-  },
-  forestmistColor: {
-    color: COLORS.FORESTMIST,
-    textDecorationLine: 'underline',
+  progressCard: {
+    marginTop: 30,
   },
 });

@@ -6,6 +6,7 @@ export const COLORS = {
   DARKGREY: '#555F60',
   FOG: '#C5CED3',
   FORESTMIST: '#85B2B5',
+  GRAY: '#C5CED340',
   RED: '#FF3333',
   SUNNY: '#E2C290',
   TITAN_WHITE: '#FCFCFF',

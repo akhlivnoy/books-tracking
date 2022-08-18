@@ -2,18 +2,19 @@ import React, { useCallback } from 'react';
 import { Image, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Formik } from 'formik';
-import * as yup from 'yup';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import _ from 'lodash';
 
 import { IMAGES } from '../../assets';
 import {
   ExtendedButton,
   ExtendedText,
   ExtendedTextInput,
-  ExtendedTextInputType,
 } from '../../components';
 import { IRegisterScreenProps } from './RegisterScreen.props';
 import { styles } from './RegisterScreen.styles';
+import { signUpValidationSchema } from './RegisterScreen.validation';
+import { INPUTS_DATA } from './RegisterScreen.data';
 
 export const RegisterScreen: React.FC<IRegisterScreenProps> = ({
   navigation,
@@ -21,32 +22,6 @@ export const RegisterScreen: React.FC<IRegisterScreenProps> = ({
   const goToLogin = useCallback(() => {
     navigation.navigate('Login');
   }, [navigation]);
-
-  const signUpValidationSchema = yup.object().shape({
-    fullName: yup
-      .string()
-      .matches(/(\w.+\s).+/, 'Enter at least 2 names')
-      .required('Full name is required'),
-    email: yup
-      .string()
-      .email('Please enter valid email')
-      .required('Email is required'),
-    password: yup
-      .string()
-      .matches(/\w*[a-z]\w*/, 'Password must have a small letter')
-      .matches(/\w*[A-Z]\w*/, 'Password must have a capital letter')
-      .matches(/\d/, 'Password must have a number')
-      .matches(
-        /[!@#$%^&*()\-_"=+{}; :,<.>]/,
-        'Password must have a special character',
-      )
-      .min(8, ({ min }) => `Password must be at least ${min} characters`)
-      .required('Password is required'),
-    confirmPassword: yup
-      .string()
-      .oneOf([yup.ref('password')], 'Passwords do not match')
-      .required('Confirm password is required'),
-  });
 
   return (
     <SafeAreaView style={styles.main}>
@@ -75,9 +50,8 @@ export const RegisterScreen: React.FC<IRegisterScreenProps> = ({
             confirmPassword: '',
           }}
           validationSchema={signUpValidationSchema}
-          onSubmit={values => console.log(JSON.stringify(values, null, 2))}>
+          onSubmit={_.noop}>
           {({
-            values,
             handleChange,
             errors,
             setFieldTouched,
@@ -86,52 +60,18 @@ export const RegisterScreen: React.FC<IRegisterScreenProps> = ({
             handleSubmit,
           }) => (
             <KeyboardAwareScrollView>
-              <ExtendedTextInput
-                value={values.fullName}
-                onChangeText={handleChange('fullName')}
-                onBlur={() => setFieldTouched('fullName')}
-                type={ExtendedTextInputType.Default}
-                placeholder="Full Name"
-                style={styles.input}
-                error={(touched.fullName && errors.fullName) || undefined}
-                errorStyle={styles.errorColor}
-              />
-
-              <ExtendedTextInput
-                value={values.email}
-                onChangeText={handleChange('email')}
-                onBlur={() => setFieldTouched('email')}
-                type={ExtendedTextInputType.Email}
-                placeholder="Email"
-                style={styles.input}
-                error={(touched.email && errors.email) || undefined}
-                errorStyle={styles.errorColor}
-              />
-
-              <ExtendedTextInput
-                value={values.password}
-                onChangeText={handleChange('password')}
-                onBlur={() => setFieldTouched('password')}
-                type={ExtendedTextInputType.Password}
-                placeholder="Password"
-                style={styles.input}
-                error={(touched.password && errors.password) || undefined}
-                errorStyle={styles.errorColor}
-              />
-
-              <ExtendedTextInput
-                value={values.confirmPassword}
-                onChangeText={handleChange('confirmPassword')}
-                onBlur={() => setFieldTouched('confirmPassword')}
-                type={ExtendedTextInputType.Password}
-                placeholder="Confirm Password"
-                style={styles.input}
-                error={
-                  (touched.confirmPassword && errors.confirmPassword) ||
-                  undefined
-                }
-                errorStyle={styles.errorColor}
-              />
+              {_.map(INPUTS_DATA, item => (
+                <ExtendedTextInput
+                  key={item.id}
+                  onChangeText={handleChange(item.option)}
+                  onBlur={() => setFieldTouched(item.option)}
+                  type={item.type}
+                  placeholder={item.placeholder}
+                  style={styles.input}
+                  error={touched[item.option] && errors[item.option]}
+                  errorStyle={styles.errorColor}
+                />
+              ))}
 
               <ExtendedText preset="medium12" style={styles.agreement}>
                 By signing you agree to our term of use and privacy notice

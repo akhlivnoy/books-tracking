@@ -60,7 +60,9 @@ export const ExtendedTextInput: React.FC<IExtendedTextInputProps> = ({
         <InputComponent {...initialInputProps} {...rest} style={styles.input} />
       </View>
       {error && (
-        <ExtendedText style={[styles.error, errorStyle]}>{error}</ExtendedText>
+        <ExtendedText preset="bold12" style={[styles.error, errorStyle]}>
+          {error}
+        </ExtendedText>
       )}
     </View>
   );

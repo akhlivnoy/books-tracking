@@ -31,6 +31,7 @@ exports[`UI: ExtendedTextInput should match snapshot 1`] = `
           "alignItems": "center",
           "backgroundColor": "#85B2B5",
           "borderRadius": 10,
+          "minHeight": 50,
           "padding": 10,
         },
         Object {
@@ -63,11 +64,16 @@ exports[`UI: ExtendedTextInput should match snapshot 1`] = `
     style={
       Array [
         Object {
-          "color": "#000000",
-          "fontSize": 15,
+          "fontSize": 12,
+          "fontWeight": "700",
+          "lineHeight": 17,
         },
         Array [
-          Object {},
+          Object {
+            "bottom": 10,
+            "left": 10,
+            "position": "absolute",
+          },
           Object {
             "color": "red",
             "marginTop": 10,
@@ -112,6 +118,7 @@ exports[`UI: ExtendedTextInput should match snapshot 2`] = `
           "alignItems": "center",
           "backgroundColor": "#85B2B5",
           "borderRadius": 10,
+          "minHeight": 50,
           "padding": 10,
         },
         Object {
@@ -188,11 +195,16 @@ exports[`UI: ExtendedTextInput should match snapshot 2`] = `
     style={
       Array [
         Object {
-          "color": "#000000",
-          "fontSize": 15,
+          "fontSize": 12,
+          "fontWeight": "700",
+          "lineHeight": 17,
         },
         Array [
-          Object {},
+          Object {
+            "bottom": 10,
+            "left": 10,
+            "position": "absolute",
+          },
           Object {
             "color": "red",
             "marginTop": 10,

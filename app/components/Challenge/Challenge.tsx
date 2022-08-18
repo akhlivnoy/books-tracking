@@ -1,8 +1,8 @@
 import React from 'react';
 import { Image, View } from 'react-native';
-import { ExtendedText } from '..';
-import { IMAGES } from '../../assets';
 
+import { ExtendedText } from '../ExtendedText';
+import { IMAGES } from '../../assets';
 import { IChallengeProps } from './Challenge.props';
 import { styles } from './Challenge.styles';
 

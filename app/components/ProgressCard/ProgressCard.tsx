@@ -1,7 +1,8 @@
 import React from 'react';
 import { Image, View } from 'react-native';
 
-import { ExtendedText, ProgressBar } from '..';
+import { ExtendedText } from '../ExtendedText';
+import { ProgressBar } from '../ProgressBar';
 import { IMAGES } from '../../assets';
 import { COLORS } from '../../themes/colors';
 import { generalStyles } from '../../utils/styles';
@@ -29,7 +30,7 @@ export const ProgressCard: React.FC<IProgressCardProps> = ({
           </ExtendedText>
         </View>
 
-        <Image source={IMAGES.DUMMY_CARD_IMAGE} />
+        <Image source={IMAGES.YELLOW_SQUARE} />
       </View>
       <View style={styles.progressContainer}>
         <View style={generalStyles.row}>

@@ -13,6 +13,7 @@ import { IMAGES } from '../../assets';
 import { generalStyles } from '../../utils/styles';
 
 export const ExtendedTextInput: React.FC<IExtendedTextInputProps> = ({
+  containerStyle,
   label,
   labelStyle,
   type = ExtendedTextInputType.Default,
@@ -51,7 +52,7 @@ export const ExtendedTextInput: React.FC<IExtendedTextInputProps> = ({
   }, [type]);
 
   return (
-    <View>
+    <View style={containerStyle}>
       {label && (
         <ExtendedText style={[styles.label, labelStyle]}>{label}</ExtendedText>
       )}

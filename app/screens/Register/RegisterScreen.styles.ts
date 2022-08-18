@@ -11,11 +11,15 @@ interface IHomeScreenStyles {
   title: TextStyle;
   darkgreyColor: TextStyle;
   input: ViewStyle;
-  errorColor: TextStyle;
+  inputContainer: ViewStyle;
+  error: ViewStyle;
   bottomContainer: ViewStyle;
   agreement: ViewStyle;
   forestmistColor: TextStyle;
 }
+
+const SCREEN_WIDTH = Dimensions.get('screen').width;
+const SCREEN_HIGHT = Dimensions.get('screen').height;
 
 export const styles = StyleSheet.create<IHomeScreenStyles>({
   main: {
@@ -27,17 +31,16 @@ export const styles = StyleSheet.create<IHomeScreenStyles>({
   },
   background: {
     position: 'absolute',
-    zIndex: 1,
+    zIndex: -1,
     bottom: 0,
     left: 0,
-    width: Dimensions.get('screen').width,
-    height: Dimensions.get('screen').height * 0.72,
+    width: SCREEN_WIDTH,
+    height: SCREEN_HIGHT * 0.72,
     backgroundColor: COLORS.FOG,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
   },
   contentContainer: {
-    zIndex: 2,
     paddingHorizontal: 20,
     paddingVertical: 50,
     backgroundColor: COLORS.WHITE,
@@ -49,7 +52,6 @@ export const styles = StyleSheet.create<IHomeScreenStyles>({
     left: 15,
     width: 41,
     height: 41,
-    zIndex: 3,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: COLORS.FOG,
@@ -67,9 +69,14 @@ export const styles = StyleSheet.create<IHomeScreenStyles>({
     color: COLORS.DARKGREY,
   },
   input: {
-    marginBottom: 35,
+    marginBottom: 5,
   },
-  errorColor: {
+  inputContainer: {
+    minHeight: 70,
+    marginBottom: 10,
+  },
+  error: {
+    marginLeft: 10,
     color: COLORS.RED,
   },
   bottomContainer: {

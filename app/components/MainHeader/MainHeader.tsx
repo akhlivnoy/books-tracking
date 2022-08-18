@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, View } from 'react-native';
 
-import { ExtendedText } from '..';
+import { ExtendedText } from '../ExtendedText';
 import { IMAGES } from '../../assets';
 import { generalStyles } from '../../utils/styles';
 import { IMainHeaderProps } from './MainHeader.props';

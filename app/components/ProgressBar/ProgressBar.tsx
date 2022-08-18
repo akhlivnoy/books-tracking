@@ -1,5 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
+
 import { IProgressBarProps } from './ProgressBar.props';
 import { styles } from './ProgressBar.styles';
 

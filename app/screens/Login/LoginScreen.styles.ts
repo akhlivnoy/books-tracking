@@ -23,7 +23,7 @@ export const styles = StyleSheet.create<IHomeScreenStyles>({
   },
   background: {
     position: 'absolute',
-    zIndex: 1,
+    zIndex: -1,
     bottom: 0,
     left: 0,
     width: Dimensions.get('screen').width,
@@ -34,7 +34,6 @@ export const styles = StyleSheet.create<IHomeScreenStyles>({
   },
   contentContainer: {
     flex: 1,
-    zIndex: 2,
     justifyContent: 'space-evenly',
     paddingHorizontal: 20,
     paddingVertical: 50,

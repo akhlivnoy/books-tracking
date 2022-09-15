@@ -66,14 +66,10 @@ exports[`UI: ExtendedTextInput should match snapshot 1`] = `
         Object {
           "fontSize": 12,
           "fontWeight": "700",
-          "lineHeight": 17,
+          "lineHeight": 14,
         },
         Array [
-          Object {
-            "bottom": 10,
-            "left": 10,
-            "position": "absolute",
-          },
+          Object {},
           Object {
             "color": "red",
             "marginTop": 10,
@@ -197,14 +193,10 @@ exports[`UI: ExtendedTextInput should match snapshot 2`] = `
         Object {
           "fontSize": 12,
           "fontWeight": "700",
-          "lineHeight": 17,
+          "lineHeight": 14,
         },
         Array [
-          Object {
-            "bottom": 10,
-            "left": 10,
-            "position": "absolute",
-          },
+          Object {},
           Object {
             "color": "red",
             "marginTop": 10,

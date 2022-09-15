@@ -24,9 +24,5 @@ export const styles = StyleSheet.create<IExtendedTextInputStyles>({
     backgroundColor: COLORS.FORESTMIST,
     borderRadius: 10,
   },
-  error: {
-    position: 'absolute',
-    left: 10,
-    bottom: 10,
-  },
+  error: {},
 });

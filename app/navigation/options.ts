@@ -15,3 +15,8 @@ export const TRANSPARENT_MODAL_WITH_FADE_ANIM_OPTIONS: NativeStackNavigationOpti
     stackAnimation: 'fade',
     stackPresentation: 'transparentModal',
   };
+
+export const DISABLED_SWIPE_GESTURES_OPTIONS: NativeStackNavigationOptions = {
+  gestureEnabled: false,
+  headerShown: false,
+};

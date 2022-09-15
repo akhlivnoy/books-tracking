@@ -12,6 +12,8 @@ export interface IGeneralStyles {
   aiCenter: ViewStyle;
   aiEnd: ViewStyle;
 
+  asCenter: ViewStyle;
+
   centered: ViewStyle;
 
   row: ViewStyle;
@@ -41,6 +43,10 @@ export const generalStyles = StyleSheet.create<IGeneralStyles>({
   },
   aiEnd: {
     alignItems: 'flex-end',
+  },
+
+  asCenter: {
+    alignSelf: 'center',
   },
 
   centered: {

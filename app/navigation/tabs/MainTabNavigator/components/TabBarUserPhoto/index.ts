@@ -1,0 +1,1 @@
+export { TabBarUserPhoto } from './TabBarUserPhoto';

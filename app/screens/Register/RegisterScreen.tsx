@@ -26,7 +26,6 @@ export const RegisterScreen: React.FC<IRegisterScreenProps> = ({
   return (
     <SafeAreaView style={styles.main}>
       <View style={styles.background} />
-
       <View style={styles.contentContainer}>
         <TouchableOpacity onPress={navigation.goBack} style={styles.roundBtn}>
           <Image source={IMAGES.ARROW_LEFT} />
@@ -68,8 +67,9 @@ export const RegisterScreen: React.FC<IRegisterScreenProps> = ({
                   type={item.type}
                   placeholder={item.placeholder}
                   style={styles.input}
+                  containerStyle={styles.inputContainer}
                   error={touched[item.option] && errors[item.option]}
-                  errorStyle={styles.errorColor}
+                  errorStyle={styles.error}
                 />
               ))}
 

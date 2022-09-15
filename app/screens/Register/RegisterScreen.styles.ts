@@ -2,7 +2,7 @@ import { StyleSheet, ViewStyle, TextStyle, Dimensions } from 'react-native';
 
 import { COLORS } from '../../themes/colors';
 
-interface IHomeScreenStyles {
+interface IRegisterScreenStyles {
   main: ViewStyle;
   background: ViewStyle;
   contentContainer: ViewStyle;
@@ -18,10 +18,11 @@ interface IHomeScreenStyles {
   forestmistColor: TextStyle;
 }
 
+
 const SCREEN_WIDTH = Dimensions.get('screen').width;
 const SCREEN_HIGHT = Dimensions.get('screen').height;
 
-export const styles = StyleSheet.create<IHomeScreenStyles>({
+export const styles = StyleSheet.create<IRegisterScreenStyles>({
   main: {
     flex: 1,
     justifyContent: 'center',
